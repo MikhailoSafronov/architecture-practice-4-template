@@ -17,6 +17,7 @@ jobs:
 
       - name: Set up Docker Compose
         run: |
+          docker compose -f docker-compose.yaml -f docker-compose.test.yaml build --no-cache
           docker compose -f docker-compose.yaml -f docker-compose.test.yaml up --exit-code-from test
 
       - name: Clean up

@@ -10,4 +10,6 @@ RUN go mod download
 
 WORKDIR /app/integration
 
+RUN find /app -type f
+
 CMD ["go", "test", "-v", "."]

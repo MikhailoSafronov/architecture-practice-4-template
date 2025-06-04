@@ -20,4 +20,4 @@ jobs:
 
     - name: Show logs on failure
       if: failure()
-      run: docker-compose -f docker-compose.test.yaml logs
+      run: docker compose -f docker-compose.test.yaml logs

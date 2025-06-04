@@ -12,7 +12,7 @@ const (
 	healthEndpoint = "/health"
 	requestsCount  = 15
 	timeout        = 5 * time.Second
-	retryInterval  = 500 * time.Second
+	retryInterval  = 20 * time.Second
 	maxRetries     = 30
 )
 

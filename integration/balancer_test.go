@@ -8,7 +8,7 @@ import (
 )
 
 const (
-	lbAddr         = "http://lb:8080"
+	lbAddr         = "http://balancer:8080"
 	healthEndpoint = "/health"
 	requestsCount  = 15
 	timeout        = 5 * time.Second

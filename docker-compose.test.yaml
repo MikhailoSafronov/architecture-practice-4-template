@@ -11,27 +11,9 @@ services:
       - server3
       - balancer
 
-   balancer:
+  balancer:
+    # Для тестів включаємо режим відлагодження, коли балансувальник додає інформацію, кому було відправлено запит.
     command: ["lb", "--trace=true"]
-    build: .
+    
     networks:
-      - servers
-    container_name: lb  # <-- Додаємо ім’я контейнера
-
-  server1:
-    build: .
-    networks:
-      - servers
-
-  server2:
-    build: .
-    networks:
-      - servers
-
-  server3:
-    build: .
-    networks:
-      - servers
-
-networks:
-  servers:
+      servers:

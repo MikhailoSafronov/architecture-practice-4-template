@@ -1,6 +1,7 @@
 FROM golang:1.21-alpine
 
-WORKDIR /app
+WORKDIR /app/integration
+CMD ["go", "test", "-v", "."]
 COPY . .
 
 RUN go mod download

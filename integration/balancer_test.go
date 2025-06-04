@@ -13,7 +13,7 @@ const (
 	requestsCount  = 15
 	timeout        = 5 * time.Second
 	retryInterval  = 20 * time.Second
-	maxRetries     = 30
+	maxRetries     = 5
 )
 
 func TestLeastConnectionsDistribution(t *testing.T) {

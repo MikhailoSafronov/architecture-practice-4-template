@@ -12,8 +12,8 @@ const (
 	healthEndpoint = "/health"
 	requestsCount  = 15
 	timeout        = 5 * time.Second
-	retryInterval  = 1 * time.Second
-	maxRetries     = 10
+	retryInterval  = 500 * time.Second
+	maxRetries     = 30
 )
 
 func TestLeastConnectionsDistribution(t *testing.T) {

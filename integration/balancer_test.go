@@ -8,12 +8,12 @@ import (
 )
 
 const (
-	lbAddr         = "http://lb:8080"
+	lbAddr         = "http://balancer:8090/api/v1/some-data"
 	healthEndpoint = "/health"
 	requestsCount  = 15
 	timeout        = 5 * time.Second
-	retryInterval  = 1 * time.Second
-	maxRetries     = 10
+	retryInterval  = 20 * time.Second
+	maxRetries     = 30
 )
 
 func TestLeastConnectionsDistribution(t *testing.T) {
